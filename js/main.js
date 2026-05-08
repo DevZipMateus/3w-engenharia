@@ -2,6 +2,13 @@
    3W ENGENHARIA — JavaScript Principal
    ============================================================ */
 
+/* ── Preloader (6 segundos) ────────────────────────────────── */
+(function () {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  setTimeout(() => preloader.classList.add('hidden'), 6000);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Header scroll ─────────────────────────────────────── */
@@ -43,6 +50,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ── Botão voltar ao topo ──────────────────────────────── */
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ── Aviso LGPD ────────────────────────────────────────── */
+  const lgpdNotice  = document.getElementById('lgpd-notice');
+  const lgpdAccept  = document.getElementById('lgpd-accept');
+  if (lgpdNotice && !localStorage.getItem('lgpd-accepted')) {
+    setTimeout(() => lgpdNotice.classList.add('visible'), 1800);
+    lgpdAccept?.addEventListener('click', () => {
+      lgpdNotice.classList.remove('visible');
+      localStorage.setItem('lgpd-accepted', '1');
+    });
+  }
+
+  /* ── Barra de progresso de scroll ─────────────────────── */
+  const scrollProgress = document.getElementById('scroll-progress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total    = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress.style.width = (scrolled / total * 100) + '%';
+    }, { passive: true });
+  }
+
   /* ── Animações de entrada ──────────────────────────────── */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -53,7 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in, .fade-left, .fade-right').forEach(el => observer.observe(el));
+
+  /* ── Underline animada nos títulos de seção ────────────── */
+  const headerObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        headerObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.section-header').forEach(el => headerObs.observe(el));
 
   /* ── Geração da galeria ────────────────────────────────── */
   const mp4s     = new Set([11, 12, 29, 48, 59, 61, 72, 76, 86, 113]);

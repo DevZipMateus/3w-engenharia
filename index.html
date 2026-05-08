@@ -35,8 +35,43 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org — SEO estruturado -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ConstructionCompany",
+    "name": "3W Engenharia e Construção",
+    "foundingDate": "2017",
+    "description": "Especialistas em construção civil e infraestrutura de saneamento básico nos estados do Paraná, São Paulo e Santa Catarina.",
+    "telephone": "+554238482888",
+    "email": "wagner@3wengenharia.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Domingos Luiz de Oliveira, 63, Centro",
+      "addressLocality": "Prudentópolis",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Paraná", "São Paulo", "Santa Catarina"],
+    "knowsAbout": ["Saneamento básico", "Construção civil", "ETA", "ETE", "Licitações públicas"]
+  }
+  </script>
 </head>
 <body>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ── Preloader ──────────────────────────────────────────── -->
+<div id="preloader" aria-hidden="true">
+  <video class="preloader-video" autoplay muted playsinline>
+    <source src="images/Cria%C3%A7%C3%A3o_de_V%C3%ADdeo_Timelapse_R%C3%A1pido.mp4" type="video/mp4">
+  </video>
+  <div class="preloader-overlay"></div>
+  <div class="preloader-inner">
+    <img src="images/logo.png" alt="3W Engenharia e Construção" class="preloader-logo">
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+</div>
 
   <!-- ============================================================
        HEADER
@@ -117,6 +152,11 @@
           </div>
         </div>
       </div>
+
+      <!-- Indicador de scroll -->
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="hero-scroll-mouse"><div class="hero-scroll-wheel"></div></div>
+      </div>
     </section>
 
     <!-- ==================== STATS ==================== -->
@@ -151,11 +191,89 @@
       </div>
     </section>
 
+    <!-- ==================== FAIXA DE CONFIANÇA ==================== -->
+    <section class="trust-strip" aria-label="Selos e conformidade">
+      <div class="container">
+        <div class="trust-inner">
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div class="trust-label">
+              <strong>Registro CREA-PR</strong>
+              <span>Engenheiro civil habilitado</span>
+            </div>
+          </div>
+
+          <div class="trust-sep" aria-hidden="true"></div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="trust-label">
+              <strong>Normas ABNT</strong>
+              <span>Conformidade técnica total</span>
+            </div>
+          </div>
+
+          <div class="trust-sep" aria-hidden="true"></div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="trust-label">
+              <strong>Equipe Qualificada</strong>
+              <span>NRs e segurança do trabalho</span>
+            </div>
+          </div>
+
+          <div class="trust-sep" aria-hidden="true"></div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <div class="trust-label">
+              <strong>Habilitada p/ Licitações</strong>
+              <span>Documentação sempre em dia</span>
+            </div>
+          </div>
+
+          <div class="trust-sep" aria-hidden="true"></div>
+
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="trust-label">
+              <strong>PR · SP · SC</strong>
+              <span>Atuação em 3 estados</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== SOBRE ==================== -->
     <section id="sobre" class="about">
       <div class="container">
         <div class="about-grid">
-          <div class="about-text fade-in">
+          <div class="about-text fade-left">
             <span class="section-tag">Quem somos</span>
             <h2>Engenharia comprometida com a vida e com a comunidade</h2>
             <p>
@@ -218,7 +336,7 @@
             </div>
           </div>
 
-          <div class="about-image-wrap fade-in">
+          <div class="about-image-wrap fade-right">
             <img src="images/about-img.jpg" alt="Engenheiro da 3W Engenharia em obra de saneamento">
             <div class="about-badge" aria-label="Fundada em 2017">
               <span>Desde</span>
@@ -240,7 +358,7 @@
 
         <div class="services-grid">
           <!-- Construção Civil -->
-          <div class="service-card fade-in">
+          <div class="service-card fade-left">
             <div class="service-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
@@ -262,7 +380,7 @@
           </div>
 
           <!-- Saneamento Básico -->
-          <div class="service-card fade-in">
+          <div class="service-card fade-right">
             <div class="service-icon" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
@@ -467,6 +585,56 @@
       </div>
     </section>
 
+    <!-- ==================== DEPOIMENTOS ==================== -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Quem aprova a 3W</span>
+          <h2>Depoimentos de clientes</h2>
+          <p>A qualidade de nossas entregas é confirmada por quem mais importa: nossos clientes.</p>
+        </div>
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+            <blockquote>"A 3W demonstrou total domínio técnico na execução da rede coletora de esgoto. Prazo cumprido, documentação impecável e equipe altamente qualificada. Uma das melhores contratadas com as quais já trabalhamos."</blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">FS</div>
+              <div class="testimonial-info">
+                <strong>Felipe S.</strong>
+                <span>Fiscal de Contratos · Companhia de Saneamento</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+            <blockquote>"Contratamos a 3W Engenharia para obras de infraestrutura urbana no município e ficamos muito satisfeitos. Entregaram dentro do prazo e do orçamento, com qualidade técnica muito acima do esperado."</blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MR</div>
+              <div class="testimonial-info">
+                <strong>Marcos R.</strong>
+                <span>Secretário de Obras · Prefeitura Municipal</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-in">
+            <div class="testimonial-stars" aria-label="Avaliação 5 estrelas">★★★★★</div>
+            <blockquote>"Parceria de excelência. A 3W entregou nosso empreendimento residencial com acabamento diferenciado e suporte constante em todas as etapas da obra. Recomendo sem hesitar."</blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AL</div>
+              <div class="testimonial-info">
+                <strong>Ana L.</strong>
+                <span>Diretora · Incorporadora Regional</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== HISTÓRIA ==================== -->
     <section id="historia" class="history">
       <div class="container">
@@ -479,7 +647,7 @@
         <div class="timeline">
           <!-- 2017 -->
           <div class="timeline-item">
-            <div class="timeline-content fade-in">
+            <div class="timeline-content fade-left">
               <div class="timeline-year">2017</div>
               <h3>Fundação da 3W Engenharia</h3>
               <p>
@@ -500,7 +668,7 @@
             <div class="timeline-dot">
               <div class="timeline-dot-inner" aria-hidden="true">2019</div>
             </div>
-            <div class="timeline-content fade-in">
+            <div class="timeline-content fade-right">
               <div class="timeline-year">2019</div>
               <h3>Graduação e crescimento</h3>
               <p>
@@ -513,7 +681,7 @@
 
           <!-- 2020 -->
           <div class="timeline-item">
-            <div class="timeline-content fade-in">
+            <div class="timeline-content fade-left">
               <div class="timeline-year">2020</div>
               <h3>Superação e renovação</h3>
               <p>
@@ -535,7 +703,7 @@
             <div class="timeline-dot">
               <div class="timeline-dot-inner" aria-hidden="true">Hoje</div>
             </div>
-            <div class="timeline-content fade-in">
+            <div class="timeline-content fade-right">
               <div class="timeline-year">Hoje</div>
               <h3>Referência regional em engenharia</h3>
               <p>
@@ -781,6 +949,26 @@
       </div>
     </div>
   </footer>
+
+  <!-- ── Botão voltar ao topo ─────────────────────────────── -->
+  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- ── Aviso LGPD ─────────────────────────────────────────── -->
+  <div id="lgpd-notice" role="banner" aria-label="Aviso de privacidade">
+    <div class="lgpd-inner">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Utilizamos cookies para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa política de privacidade em conformidade com a <strong>LGPD</strong>.
+      </p>
+      <button id="lgpd-accept">Entendido</button>
+    </div>
+  </div>
 
   <!-- ── WhatsApp flutuante ────────────────────────────────── -->
   <a href="https://wa.me/554238482888"
